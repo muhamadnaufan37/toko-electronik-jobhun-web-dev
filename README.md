@@ -67,7 +67,7 @@ yarn install
 Buat file `.env` di root folder dan isi dengan:
 
 ```
-VITE_API_BASE_URL=https://api-unibookstore.digitaldatagenerus.com/api
+VITE_API_BASE_URL=https://url/api
 ```
 
 ### 4. Jalankan Aplikasi
