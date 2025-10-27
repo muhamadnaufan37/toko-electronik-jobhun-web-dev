@@ -1,50 +1,140 @@
-# React + TypeScript + Vite
+# 🛒 Admin Elektronik Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. test
+Frontend panel untuk mengelola data produk elektronik. Dibangun menggunakan **React**, **TailwindCSS**, dan **Framer Motion** dengan desain responsif dan struktur komponen yang modular.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fitur Utama
 
-## Expanding the ESLint configuration
+- **Dashboard Admin**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  - Tampilan ringkasan produk dan data statistik.
 
-- Configure the top-level `parserOptions` property like this:
+- **Manajemen Produk**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+  - Menampilkan daftar produk.
+  - Tambah, ubah, dan hapus produk.
+  - Menampilkan gambar produk dari URL API.
+
+- **Animasi Halus**
+
+  - Transisi halaman menggunakan Framer Motion.
+
+- **Autentikasi**
+
+  - Sistem login dan logout dengan context.
+
+- **Desain Responsif**
+
+  - Sidebar tetap di tempat, konten scroll terpisah.
+  - Optimal untuk desktop & tablet.
+
+---
+
+## 🧩 Teknologi yang Digunakan
+
+| Teknologi        | Kegunaan             |
+| ---------------- | -------------------- |
+| React 18         | Library UI utama     |
+| React Router DOM | Routing halaman      |
+| TailwindCSS      | Styling responsif    |
+| Framer Motion    | Animasi transisi     |
+| Axios            | HTTP request ke API  |
+| Context API      | Manajemen auth state |
+| React Icons      | Ikon antarmuka       |
+
+---
+
+## 🛠️ Instalasi & Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username/admin-elektronik-frontend.git
+cd admin-elektronik-frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
+```bash
+npm install
+# atau
+yarn install
 ```
+
+### 3. Konfigurasi Environment
+
+Buat file `.env` di root folder dan isi dengan:
+
+```
+VITE_API_BASE_URL=https://api-unibookstore.digitaldatagenerus.com/api
+```
+
+### 4. Jalankan Aplikasi
+
+```bash
+npm run dev
+```
+
+Lalu buka di browser:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📁 Struktur Folder
+
+```
+src/
+├── components/
+│   ├── Layout/
+│   │   ├── Layout.tsx
+│   │   ├── Sidebar.tsx
+│   │   └── Topbar.tsx
+│   ├── ProductCard.tsx
+│   └── ModalDelete.tsx
+├── pages/
+│   ├── Dashboard.tsx
+│   └── Products.tsx
+├── contexts/
+│   └── AuthContext.tsx
+├── App.tsx
+├── main.tsx
+└── styles/
+    └── index.css
+```
+
+---
+
+## 🧹 Fitur Responsif Sidebar
+
+- Sidebar **tetap terlihat** di desktop.
+- Pada layar kecil, sidebar dapat disembunyikan.
+- Hanya konten utama yang **scrollable**, bukan seluruh layout.
+
+---
+
+## 🧩 Kontribusi
+
+1. Fork repository ini.
+2. Buat branch fitur baru:
+
+   ```bash
+   git checkout -b fitur-baru
+   ```
+
+3. Commit perubahan:
+
+   ```bash
+   git commit -m "Tambah fitur baru"
+   ```
+
+4. Push dan buat pull request.
+
+---
+
+## 📄 Lisensi
+
+MIT License © 2025 - Admin Elektronik
