@@ -50,8 +50,8 @@ Frontend panel untuk mengelola data produk elektronik. Dibangun menggunakan **Re
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/admin-elektronik-frontend.git
-cd admin-elektronik-frontend
+git clone https://github.com/username/toko-electronik-jobhun-web-dev.git
+cd toko-electronik-jobhun-web-dev
 ```
 
 ### 2. Install Dependencies
@@ -137,4 +137,4 @@ src/
 
 ## 📄 Lisensi
 
-MIT License © 2025 - Admin Elektronik
+MIT License © 2025 - Naufan
